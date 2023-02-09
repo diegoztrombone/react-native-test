@@ -9,4 +9,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.white,
   },
+  input: {
+    borderWidth: 1,
+    width: 150,
+    borderColor: colors.gray2,
+    borderRadius: 10,
+  },
 });

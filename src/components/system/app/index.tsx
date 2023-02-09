@@ -1,11 +1,18 @@
 import React, { FC } from 'react';
-import { StatusBar } from 'react-native';
+import { AuthProvider } from '../../../context/AuthContext';
 
 import Routes from '../routes';
 
-const MainProvider: FC = ({ children }) => <>{children}</>;
+const providersComposer = providers =>
+  providers.reduce((Prev, Curr) => ({ children }) => (
+    <Prev>
+      <Curr>{children}</Curr>
+    </Prev>
+  ));
 
-const App = () => (
+const MainProvider = providersComposer([AuthProvider]);
+
+const App: FC = () => (
   <MainProvider>
     <Routes />
   </MainProvider>
