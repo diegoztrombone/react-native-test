@@ -1,12 +1,14 @@
-import React, { FC } from 'react'
-import { Text, View } from 'react-native'
+import React, { FC } from 'react';
+import { StatusBar } from 'react-native';
 
-import Routes from '../routes'
+import Routes from '../routes';
 
-const App = () => {
-  return (
-    <Routes/>
-  )
-}
+const MainProvider: FC = ({ children }) => <>{children}</>;
 
-export default App
+const App = () => (
+  <MainProvider>
+    <Routes />
+  </MainProvider>
+);
+
+export default App;

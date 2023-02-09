@@ -11,7 +11,7 @@ type Props = NativeStackScreenProps<RoutesType, 'Login'>;
 const Login: FC<Props> = () => {
   return (
     <View style={styles.container}>
-      <Text>HOLA LOGIn</Text>
+      <Text>Login</Text>
     </View>
   );
 };
